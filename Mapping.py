@@ -3,7 +3,7 @@ import pandas as pd
 import statsmodels.api as sm
 import numpy as np
 tickers = ['SLGG', 'AAPL', '^RUT', '^IXIC','^GSPC']
-D = yf.download(tickers, start='2022-08-01', end='2023-06-01')
+D = yf.download(tickers, start='2022-06-01', end='2023-06-01')
 P = D['Adj Close']
 Returns = P / P.shift(1) -1
 R = P.pct_change()
